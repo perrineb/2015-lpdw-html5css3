@@ -1,0 +1,19 @@
+
+/*
+ * FONT SIZES EM / REM
+ */
+
+// Utilisation : 
+// font-size: pxtoem(12)   // parent = $base-font-size
+// font-size: pxtoem(12, 14)  // parent = 14px
+@function pxtoem($target, $context: $base-font-size)
+  @return ($target / $context) + 0em
+
+
+// Utilisation : 
+// pxtorem('font-size', 12) 
+// pxtorem('line-height', 18) 
+@mixin pxtorem($property, $target) 
+  #{$property}: #{$target + px}
+  #{$property}: #{($target / $base-font-size) + rem}
+

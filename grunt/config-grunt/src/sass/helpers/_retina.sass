@@ -1,0 +1,20 @@
+// retina.scss
+// Defaults to png but can be overwritten to jpg or gif
+//$image name is equal to the image name with out it's extention - 'example.png' would be defined as 'example'
+// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+
+@mixin at2x($image_name, $w: auto, $h: auto, $extention: '.png') 
+    background-image: url($image_name + $extention)
+    $x2img : $image_name + '@2x' + $extention
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+        background-image: url($x2img)
+        background-size:  $w $h
+
+
+@mixin background-position-at2x($x, $y) 
+    background-position: $x $y
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+        background-position: $x*2  $y*2
+        
