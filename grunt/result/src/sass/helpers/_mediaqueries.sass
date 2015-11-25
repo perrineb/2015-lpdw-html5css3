@@ -1,0 +1,63 @@
+
+
+/*
+ * MEDIAQUERIES
+ */
+
+@mixin media-desktop-and-more
+  @media only screen and (min-width : $desktop-size + 1px )
+    @content
+
+@mixin media-desktop-and-less
+  @media only screen and (max-width : $desktop-size )
+    @content
+
+@mixin media-smartphone-and-more
+  @media only screen and (min-width : $smartphone-size + 1px )
+    @content
+
+@mixin media-smartphone-and-less
+  @media only screen and (max-width : $smartphone-size )
+    @content
+
+
+
+@mixin media-size-xl-and-more
+  @media only screen and (min-width : $size-xl + 1px )
+    @content
+
+@mixin media-size-xl-and-less
+  @media only screen and (max-width : $size-xl )
+    @content
+
+
+@mixin media-size-l-and-more
+  @media only screen and (min-width : $size-l + 1px )
+    @content
+
+@mixin media-size-l-and-less
+  @media only screen and (max-width : $size-l )
+    @content
+
+
+@mixin media-size-m-and-more
+  @media only screen and (min-width : $size-m + 1px )
+    @content
+
+@mixin media-size-m-and-less
+  @media only screen and (max-width : $size-m )
+    @content
+
+
+@mixin media-size-s-and-more
+  @media only screen and (min-width : $size-s + 1px )
+    @content
+
+@mixin media-size-s-and-less
+  @media only screen and (max-width : $size-s )
+    @content
+
+
+
+
+

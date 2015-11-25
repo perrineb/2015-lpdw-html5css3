@@ -1,0 +1,57 @@
+.anim {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    border: 1px solid #000; 
+    background-color: rgba(0, 0, 0, .01);
+}
+
+.ball, .shadow {
+    position: absolute;
+    left: 100px;
+    width: 30px; 
+    margin-left: -15px;
+}
+
+.ball {
+    top: 135px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 0 -7px rgba(0, 0, 0, .1) inset;
+    animation: bounce .5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s infinite alternate;
+}
+
+.shadow {
+    top: 158px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow:  0 0 0 0  rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .1);
+    animation: shadow .5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s infinite alternate;
+}
+
+
+@keyframes bounce {
+    from {
+        top: 135px;
+    }
+    to {
+        top: 35px;
+    }
+}
+
+@keyframes shadow {
+    from {
+        box-shadow:  0 0 0 0  rgba(0, 0, 0, .1);
+        background-color: rgba(0, 0, 0, .1);
+    }
+    to {
+        box-shadow:  0 0 0 10px rgba(0, 0, 0, .05);
+        background-color: rgba(0, 0, 0, .05);
+    }
+}

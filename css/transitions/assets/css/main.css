@@ -1,0 +1,48 @@
+
+/* Responsive menu Toggle */
+
+.main-nav__toggle {
+    display: block;
+    position: absolute;
+    height: 44px;
+    width: 44px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.main-nav__toggle span {
+    position: absolute;
+    height: 4px;
+    left: 7px;
+    width: 30px;
+    background-color: #1fbed6;
+    transition: transform .5s, top .5s, opacity .2s;
+}
+    
+.main-nav__toggle span:nth-child(1) {
+    top: 9px;
+}
+
+.main-nav__toggle span:nth-child(2) {
+    top: 20px;
+}
+
+.main-nav__toggle span:nth-child(3) {
+    top: 32px;
+}
+
+.main-nav__toggle:hover span:nth-child(1) {
+    top: 22px;
+    transform: rotate(45deg);
+}
+
+.main-nav__toggle:hover span:nth-child(2) {
+    opacity: 0;
+}
+
+.main-nav__toggle:hover span:nth-child(3) {
+    top: 22px;
+    transform: rotate(-45deg);
+}
+
